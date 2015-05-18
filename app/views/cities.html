@@ -1,0 +1,18 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h1>Cities</h1>
+    <h3 ng-cloak>{{CityCtl.city.detail.name}} - {{CityCtl.city.detail.weather.current.icon}} - {{CityCtl.city.detail.weather.current.temperature}}</h3>
+  </div>
+  <table class="table table-striped">
+    <tr>
+      <td>City</td>
+      <td>Latitude</td>
+      <td>Longitude</td>
+      <td>Timezone</td>
+    </tr>
+    <tr ng-repeat="(key, value) in CityCtl.city.list" ng-click="CityCtl.city.show(key)">
+      <td>{{key}}</td>
+      <td ng-repeat="(key, value) in value">{{value}}</td>
+    </tr>
+  </table>
+</div>

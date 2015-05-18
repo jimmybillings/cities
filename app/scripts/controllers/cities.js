@@ -6,7 +6,6 @@ Cities = (function() {
 
   function Cities(City) {
     this.city = City
-    this.city.list = City.list;
     this.index();
   }
 
